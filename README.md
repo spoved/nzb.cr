@@ -1,6 +1,6 @@
 # nzb
 
-TODO: Write a description here
+Small wrapper library to read and write NZB files
 
 ## Installation
 
@@ -18,13 +18,9 @@ TODO: Write a description here
 
 ```crystal
 require "nzb"
+
+nzb = Nzb.open("path to nzb")
 ```
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
