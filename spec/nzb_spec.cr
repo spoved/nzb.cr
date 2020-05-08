@@ -1,16 +1,18 @@
 require "./spec_helper"
 
 describe Nzb do
-  # TODO: Write tests
-
   it "writes base nzb" do
-    Nzb.new("spec/files/test").write_nzb
+    Nzb::Builder.new("spec/files/test").write
     file_path = "spec/files/test.nzb"
     File.exists?(file_path).should be_true
-    xml = File.read(file_path)
-    document = XML.parse(xml) # : XML::Node
-    puts document
-
     FileUtils.rm(file_path)
+  end
+
+  it "can be read from file" do
+    nzb = Nzb.open(EXAMPLE_NZB)
+    nzb.name.should eq "2kGiFqHLaYfIBPbtk1CPsDsdDJubu4"
+    nzb.category.should eq "Other > Misc"
+    nzb.files.should_not be_empty
+    nzb.files.size.should eq 5
   end
 end
