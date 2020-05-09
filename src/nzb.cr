@@ -1,10 +1,21 @@
 require "xml"
+require "json"
 
 class Nzb
   property name : String? = nil
   property category : String? = nil
   property metadata : Hash(String, String) = Hash(String, String).new
   getter files : Array(Nzb::File) = [] of Nzb::File
+
+  JSON.mapping(
+    name: String?,
+    category: String?,
+    metadata: Hash(String, String),
+    files: Array(Nzb::File),
+  )
+
+  def initialize
+  end
 
   def from_xml(xml : XML::Node) : Nzb
     xml.children.each do |child|

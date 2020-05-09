@@ -1,8 +1,16 @@
+require "json"
+
 class Nzb
   class Segment
     property bytes : Int64
     property number : Int64
     property text : String
+
+    JSON.mapping(
+      bytes: Int64,
+      number: Int64,
+      text: String,
+    )
 
     def initialize(@bytes, @number, @text); end
 

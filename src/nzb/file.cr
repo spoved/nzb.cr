@@ -1,3 +1,6 @@
+require "./segment"
+require "json"
+
 class Nzb
   class File
     property poster : String
@@ -5,6 +8,14 @@ class Nzb
     property subject : String
     property groups : Array(String) = Array(String).new
     property segments : Array(Segment) = Array(Segment).new
+
+    JSON.mapping(
+      poster: String,
+      date: Time,
+      subject: String,
+      groups: Array(String),
+      segments: Array(Segment),
+    )
 
     def initialize(@poster, @date, @subject,
                    @groups = Array(String).new, @segments = Array(Segment).new); end
