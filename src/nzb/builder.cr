@@ -43,7 +43,7 @@ class Nzb::Builder
       xml.element("meta", type: "category") { xml.text nzb.category.as(String) } unless nzb.category.nil?
 
       nzb.metadata.each do |k, v|
-        xml.element("meta", type: k) { xml.text v } unless nzb.category.nil?
+        xml.element("meta", type: k) { xml.text v }
       end
     end
 
