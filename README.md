@@ -1,6 +1,7 @@
 # nzb
 
 [![Build Status](https://travis-ci.com/spoved/nzb.cr.svg?branch=master)](https://travis-ci.com/spoved/nzb.cr)
+
 Small wrapper library to read and write NZB files
 
 ## Installation
