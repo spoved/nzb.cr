@@ -1,4 +1,4 @@
-require "json"
+require "json_mapping"
 
 class Nzb
   class Segment

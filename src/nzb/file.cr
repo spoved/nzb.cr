@@ -1,5 +1,5 @@
 require "./segment"
-require "json"
+require "json_mapping"
 
 class Nzb
   class File

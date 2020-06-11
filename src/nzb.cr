@@ -1,5 +1,5 @@
 require "xml"
-require "json"
+require "json_mapping"
 
 class Nzb
   property name : String? = nil

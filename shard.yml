@@ -1,5 +1,5 @@
 name: nzb
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Holden Omans <holden.omans@gmail.com>
@@ -8,7 +8,9 @@ crystal: 0.34.0
 
 license: MIT
 
-dependencies: {}
+dependencies:
+  json_mapping:
+    github: crystal-lang/json_mapping.cr
 development_dependencies:
   ameba:
     github: veelenga/ameba
