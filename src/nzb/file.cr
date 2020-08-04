@@ -28,9 +28,11 @@ class Nzb
       xml.element("file", poster: poster, date: date.to_unix.to_s, subject: subject) do
         xml.element("groups") { groups.each { |group| xml.element("group") { xml.text group } } }
         xml.element("segments") { segments.each &.to_xml(xml) }
-        xml.element("metadata") do
-          metadata.each do |k, v|
-            xml.element("meta", type: k) { xml.text v }
+        unless metadata.empty?
+          xml.element("metadata") do
+            metadata.each do |k, v|
+              xml.element("meta", type: k) { xml.text v }
+            end
           end
         end
       end

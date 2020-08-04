@@ -64,6 +64,10 @@ class Nzb
     xml = XML.parse(contents)
     from_xml(xml)
   end
+
+  def to_xml
+    Nzb::Builder.new(self).to_xml
+  end
 end
 
 require "./nzb/*"

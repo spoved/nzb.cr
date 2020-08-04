@@ -15,4 +15,10 @@ describe Nzb do
     nzb.files.should_not be_empty
     nzb.files.size.should eq 5
   end
+
+  it "contents can be retrieved" do
+    nzb = Nzb.open(EXAMPLE_NZB)
+    nzb.to_xml.should_not be_empty
+    puts nzb.to_xml
+  end
 end
