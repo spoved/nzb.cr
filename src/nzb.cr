@@ -17,6 +17,9 @@ class Nzb
   def initialize
   end
 
+  def initialize(@name, @category, @metadata, @files)
+  end
+
   def from_xml(xml : XML::Node) : Nzb
     xml.children.each do |child|
       next unless child.element?
