@@ -19,7 +19,9 @@ class Nzb
       metadata: Hash(String, String),
     )
 
-    def initialize(@poster, @date, @subject,
+    def initialize(@poster : String,
+                   @date : Time,
+                   @subject : String,
                    @groups = Array(String).new,
                    @segments = Array(Segment).new,
                    @metadata = Hash(String, String).new); end
