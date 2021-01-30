@@ -19,6 +19,6 @@ describe Nzb do
   it "contents can be retrieved" do
     nzb = Nzb.open(EXAMPLE_NZB)
     nzb.to_xml.should_not be_empty
-    puts nzb.to_xml
+    # puts nzb.to_xml
   end
 end
