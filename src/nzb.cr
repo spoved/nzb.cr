@@ -1,18 +1,13 @@
 require "xml"
-require "json_mapping"
+require "json"
 
 class Nzb
+  include JSON::Serializable
+
   property name : String? = nil
   property category : String? = nil
   property metadata : Hash(String, String) = Hash(String, String).new
   getter files : Array(Nzb::File) = [] of Nzb::File
-
-  JSON.mapping(
-    name: String?,
-    category: String?,
-    metadata: Hash(String, String),
-    files: Array(Nzb::File),
-  )
 
   def initialize
   end

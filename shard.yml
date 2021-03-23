@@ -4,14 +4,6 @@ version: 0.3.0
 authors:
   - Holden Omans <holden.omans@gmail.com>
 
-crystal: 1.0.0
+crystal: ">= 0.36.1, < 2.0.0"
 
 license: MIT
-
-dependencies:
-  json_mapping:
-    github: crystal-lang/json_mapping.cr
-development_dependencies:
-  ameba:
-    github: veelenga/ameba
-    version: ~> 0.13.0
