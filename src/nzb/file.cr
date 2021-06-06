@@ -1,23 +1,16 @@
 require "./segment"
-require "json_mapping"
+require "json"
 
 class Nzb
   class File
+    include JSON::Serializable
+
     property poster : String
     property date : Time
     property subject : String
     property groups : Array(String) = Array(String).new
     property segments : Array(Segment) = Array(Segment).new
     property metadata : Hash(String, String) = Hash(String, String).new
-
-    JSON.mapping(
-      poster: String,
-      date: Time,
-      subject: String,
-      groups: Array(String),
-      segments: Array(Segment),
-      metadata: Hash(String, String),
-    )
 
     def initialize(@poster : String,
                    @date : Time,

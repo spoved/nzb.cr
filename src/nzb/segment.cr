@@ -1,18 +1,12 @@
-require "json_mapping"
+require "json"
 
 class Nzb
   class Segment
+    include JSON::Serializable
     property bytes : Int64
     property number : Int64
     property text : String
     property metadata : Hash(String, String) = Hash(String, String).new
-
-    JSON.mapping(
-      bytes: Int64,
-      number: Int64,
-      text: String,
-      metadata: Hash(String, String),
-    )
 
     def initialize(@bytes, @number, @text, @metadata = Hash(String, String).new); end
 

@@ -1,6 +1,13 @@
 # nzb
 
-[![Build Status](https://travis-ci.com/spoved/nzb.cr.svg?branch=master)](https://travis-ci.com/spoved/nzb.cr)
+<p align="center">
+    <a href="https://github.com/spoved/nzb.cr/actions/workflows/build.yml">
+        <img src="https://github.com/spoved/nzb.cr/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/spoved/nzb.cr/actions/workflows/release.yml">
+        <img src="https://github.com/spoved/nzb.cr/actions/workflows/release.yml/badge.svg" alt="Release Status"></a>
+    <a href="https://github.com/spoved/nzb.cr/releases">
+        <img src="https://img.shields.io/github/v/release/spoved/nzb.cr" alt="Latest release"></a>
+</p>
 
 Small wrapper library to read and write NZB files
 
